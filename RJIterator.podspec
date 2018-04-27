@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "RJIterator"
-  s.version      = "1.1.5"
+  s.version      = "1.1.6"
   s.summary      = "生成器与迭代器的OC实现"
 
   # This description is used to generate tags and improve search results.
@@ -25,10 +25,10 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-  生成器与迭代器的OC实现,实现类似ES6的yied语意,实现async异步块，支持在iOS项目中以同步风格编写异步代码,避免了回调链和Promise链.
+                    生成器与迭代器的OC实现,实现类似ES6的yied语意,实现async异步块，支持在iOS项目中以同步风格编写异步代码,避免了回调链和Promise链.
                    DESC
 
-  s.homepage     = "https://github.com/renjinkui2719/RJIterator.git"
+  s.homepage     = "https://github.com/ljyKangaroo/RJIterator.git"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -65,7 +65,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-   s.platform     = :ios, "8.0"
+  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/renjinkui2719/RJIterator.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/ljyKangaroo/RJIterator.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,8 +90,6 @@ Pod::Spec.new do |s|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-
-  s.source_files  = "RJIterator/Class/*.{h,m,swift}"
   # s.exclude_files = "Classes/Exclude"
 
   s.public_header_files = "RJIterator/Class/*.h"
@@ -135,6 +133,5 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
-  s.swift_version = "3.2"
 
 end

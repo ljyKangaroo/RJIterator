@@ -12,11 +12,6 @@
 #import <setjmp.h>
 #import <pthread.h>
 
-#if DEMO
-#import "RJIterator-Swift.h"
-#else
-#import <RJIterator/RJIterator-Swift.h>
-#endif
 
 #if __has_feature(objc_arc)
 //ARC下存在跳转导致的编译器生成的释放函数执行不到的问题
@@ -533,6 +528,7 @@ RJAsyncEpilog * rj_async(dispatch_block_t block) {
                 });
             }
             //swift 闭包
+            /*
             else if (NSClassFromString(@"_SwiftValue") &&
                      [value isKindOfClass:NSClassFromString(@"_SwiftValue")] &&
                      [[value description] containsString:@"(Function)"]
@@ -545,6 +541,7 @@ RJAsyncEpilog * rj_async(dispatch_block_t block) {
                     });
                 }];
             }
+            */
             //AnyPromise
             else if (NSClassFromString(@"AnyPromise") &&
                      [value isKindOfClass:NSClassFromString(@"AnyPromise")] &&
